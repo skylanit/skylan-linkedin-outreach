@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "lucide-react": "^1.17.0",
@@ -16,6 +17,7 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.39.1",
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.12.3",
     "@types/react": "^19.2.14",
@@ -27,6 +29,7 @@
     "globals": "^17.6.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "wrangler": "^4.96.0"
   }
 }
